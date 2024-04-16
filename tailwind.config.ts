@@ -25,22 +25,23 @@ const config = {
         },
         blue: {
           1: "#0e78f9",
+          2: "#3d86e0",
         },
         sky: {
           1: "#C9DDFF"
         },
         orange: {
-          1: "#FF742E"
+          1: "#e36629"
         },
         purple: {
-          1: "#830EF9"
+          1: "#8231d4"
         },
         yellow: {
-          1: "#F9A90E"
+          1: "#e3a632"
         },
       },
       backgroundImage: {
-        hero: "url('/images/Hero-Dark-Meeting.png')"
+        hero: "url('/images/Hero-Dark-Meeting-1.png')"
       },
       keyframes: {
         "accordion-down": {
