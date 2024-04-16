@@ -14,6 +14,9 @@ import { cn } from "@/lib/utils";
 
 const MobileNav = () => {
   const pathname = usePathname();
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+
   return (
     <section className="w-full max-w-[264px]">
       <Sheet>
@@ -39,7 +42,7 @@ const MobileNav = () => {
           </Link>
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>
-              <section className="flex h-full flex-col gap-6 pt-16 text-white">
+              <section className="flex h-full flex-col gap-2 pt-16 text-white">
                 {SidebarLinks.map((link) => {
                   const isActive = pathname === link.route;
                   return (
@@ -65,6 +68,13 @@ const MobileNav = () => {
                 })}
               </section>
             </SheetClose>
+            <div className="flex flex-col justify-center gap-1">
+              <div className="flex items-center">
+                <p>&copy; {currentYear}&nbsp;&nbsp;</p>
+                <p className="hover:underline">Subhendu Kumar</p>
+              </div>
+              <p>All Rights Reserved !</p>
+            </div>
           </div>
         </SheetContent>
       </Sheet>

@@ -9,10 +9,12 @@ import Image from "next/image";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
 
   return (
     <section className="sticky left-0 top-0 flex h-screen w-fit flex-col justify-between bg-dark-1 p-6 pt-28 text-white max-sm:hidden lg:w-[264px]">
-      <div className="flex flex-1 flex-col gap-8">
+      <div className="flex flex-1 flex-col gap-2">
         {SidebarLinks.map((link) => {
           const isActive =
             pathname === link.route || pathname.startsWith(`${link.route}/`);
@@ -37,6 +39,13 @@ const Sidebar = () => {
             </Link>
           );
         })}
+      </div>
+      <div className="flex flex-col justify-center items-center gap-1">
+      <div className="flex items-center">
+        <p>&copy; {currentYear}&nbsp;&nbsp;</p>
+        <p className="hover:underline">Subhendu Kumar</p>
+      </div>
+      <p>All Rights Reserved !</p>
       </div>
     </section>
   );
