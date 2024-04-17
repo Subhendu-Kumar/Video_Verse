@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 
 import { SidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";

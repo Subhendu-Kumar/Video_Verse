@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { CallParticipantsList, PaginatedGridLayout, SpeakerLayout } from "@stream-io/video-react-sdk";
-import React, { useState } from "react";
+import { useState } from "react";
 
 type callLayOutType = "grid" | "speaker-left" | "speaker-right";
 
