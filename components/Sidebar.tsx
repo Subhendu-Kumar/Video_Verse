@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -33,19 +35,40 @@ const Sidebar = () => {
                 width={24}
                 height={24}
               />
-              <p className="text-lg font-semibold max-lg">
-                {link.label}
-              </p>
+              <p className="text-lg font-semibold max-lg">{link.label}</p>
             </Link>
           );
         })}
       </div>
       <div className="flex flex-col justify-center items-center gap-1">
-      <div className="flex items-center">
-        <p>&copy; {currentYear}&nbsp;&nbsp;</p>
-        <p className="hover:underline">Subhendu Kumar</p>
-      </div>
-      <p>All Rights Reserved !</p>
+        <div className="flex items-center">
+          <p>&copy; {currentYear}&nbsp;&nbsp;</p>
+          <a
+            className="hover:underline"
+            href="https://www.linkedin.com/in/subhendu-kumar-dutta/"
+            target="_blank"
+          >
+            Subhendu Kumar
+          </a>
+        </div>
+        <p>All Rights Reserved !</p>
+        <div className="flex justify-center items-center gap-3">
+          <p className="text-base">Visit At:</p>
+          <a
+            className="hover:underline"
+            href="https://www.linkedin.com/in/subhendu-kumar-dutta/"
+            target="_blank"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            className="hover:underline"
+            href="https://github.com/Subhendu-Kumar/"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+        </div>
       </div>
     </section>
   );

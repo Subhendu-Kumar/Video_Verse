@@ -11,6 +11,8 @@ import Link from "next/link";
 import { SidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -68,12 +70,35 @@ const MobileNav = () => {
                 })}
               </section>
             </SheetClose>
-            <div className="flex flex-col justify-center gap-1">
+            <div className="flex flex-col justify-center items-center gap-1">
               <div className="flex items-center">
                 <p>&copy; {currentYear}&nbsp;&nbsp;</p>
-                <p className="hover:underline">Subhendu Kumar</p>
+                <a
+                  className="hover:underline"
+                  href="https://www.linkedin.com/in/subhendu-kumar-dutta/"
+                  target="_blank"
+                >
+                  Subhendu Kumar
+                </a>
               </div>
               <p>All Rights Reserved !</p>
+              <div className="flex justify-center items-center gap-3">
+                <p className="text-base">Visit At:</p>
+                <a
+                  className="hover:underline"
+                  href="https://www.linkedin.com/in/subhendu-kumar-dutta/"
+                  target="_blank"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  className="hover:underline"
+                  href="https://github.com/Subhendu-Kumar/"
+                  target="_blank"
+                >
+                  <FaGithub />
+                </a>
+              </div>
             </div>
           </div>
         </SheetContent>

@@ -41,7 +41,7 @@ const config = {
         },
       },
       backgroundImage: {
-        hero: "url('/images/Hero-Dark-Meeting-1.png')"
+        hero: "url('/images/Hero-Dark-Meeting-2.png')"
       },
       keyframes: {
         "accordion-down": {
