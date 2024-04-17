@@ -81,9 +81,8 @@ const MobileNav = () => {
                   Subhendu Kumar
                 </a>
               </div>
-              <p>All Rights Reserved !</p>
               <div className="flex justify-center items-center gap-3">
-                <p className="text-base">Visit At:</p>
+                <p className="text-base">Visit Me At:</p>
                 <a
                   className="hover:underline"
                   href="https://www.linkedin.com/in/subhendu-kumar-dutta/"

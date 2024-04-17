@@ -30,7 +30,7 @@ const MeetingPopUpModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="flex w-full max-w-[520px] flex-col gap-4 border-none bg-dark-1 px-6 py-6 text-white">
-        <div className="flex flex-col gap-4 justify-center items-center">
+        <div className="flex flex-col gap-4">
           {img && (
             <div className="flex justify-center">
               <Image src={img} alt="image" width={72} height={72} />
@@ -39,7 +39,7 @@ const MeetingPopUpModal = ({
           <h1 className={cn("text-2xl font-bold", className)}>{title}</h1>
           {children}
           <Button
-            className="bg-blue-1 w-[80%] focus-visible:ring-0 focus-visible:ring-offset-0 text-base font-semibold"
+            className="bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0 text-base font-semibold"
             onClick={handelClick}
           >
             {btnIcon && (
