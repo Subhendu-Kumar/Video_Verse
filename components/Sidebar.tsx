@@ -39,7 +39,7 @@ const Sidebar = () => {
           );
         })}
       </div>
-      <div className="flex flex-col justify-center items-center gap-1">
+      <div className="flex flex-col justify-center gap-1">
         <div className="flex items-center">
           <p>&copy; {currentYear}&nbsp;&nbsp;</p>
           <a
@@ -50,7 +50,7 @@ const Sidebar = () => {
             Subhendu Kumar
           </a>
         </div>
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex items-center gap-3">
           <p className="text-base">Visit Me At:</p>
           <a
             className="hover:underline"

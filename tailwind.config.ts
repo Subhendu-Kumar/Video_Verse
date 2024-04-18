@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -20,28 +20,32 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: "#1c1f2e",
+          1: "#1C1F2E",
           2: "#161925",
+          3: "#252A41",
+          4: "#1E2757",
         },
         blue: {
           1: "#0e78f9",
           2: "#3d86e0",
         },
         sky: {
-          1: "#C9DDFF"
+          1: "#C9DDFF",
+          2: "#ECF0FF",
+          3: "#F5FCFF",
         },
         orange: {
-          1: "#e36629"
+          1: "#e36629",
         },
         purple: {
-          1: "#8231d4"
+          1: "#8231d4",
         },
         yellow: {
-          1: "#e3a632"
+          1: "#e3a632",
         },
       },
       backgroundImage: {
-        hero: "url('/images/Hero-Dark-Meeting-2.png')"
+        hero: "url('/images/Hero-Dark-Meeting-2.png')",
       },
       keyframes: {
         "accordion-down": {
@@ -60,6 +64,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

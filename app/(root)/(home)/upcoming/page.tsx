@@ -1,5 +1,4 @@
 import CallTypeList from '@/components/CallTypeList'
-import React from 'react'
 
 const Upcoming = () => {
   return (
