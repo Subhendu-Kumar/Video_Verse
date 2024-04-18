@@ -7,6 +7,7 @@ import {
   PaginatedGridLayout,
   SpeakerLayout,
   useCallStateHooks,
+  useStreamVideoClient,
 } from "@stream-io/video-react-sdk";
 import { useState } from "react";
 import {
@@ -17,16 +18,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { LayoutList, Users } from "lucide-react";
+import { LayoutList, Share2, Users } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import EndCallButton from "./EndCallButton";
 import Loader from "./Loader";
+import { useToast } from "./ui/use-toast";
 
 type callLayOutType = "grid" | "speaker-left" | "speaker-right";
 
 const MeetingRoom = () => {
+  const { toast } = useToast();
+
   const searchParams = useSearchParams();
-  const isPersonalRoom = !!searchParams.get('personal');
+  const isPersonalRoom = !!searchParams.get("personal");
 
   const [layout, setLayout] = useState<callLayOutType>("speaker-left");
   const [showParticipants, setShowParticipants] = useState(false);
@@ -35,8 +39,9 @@ const MeetingRoom = () => {
   const callingState = useCallCallingState();
 
   const router = useRouter();
+  const text = window.location.href;
 
-  if(callingState !== CallingState.JOINED) {
+  if (callingState !== CallingState.JOINED) {
     return <Loader />;
   }
 
@@ -67,7 +72,7 @@ const MeetingRoom = () => {
       </div>
 
       <div className="fixed bottom-0 flex items-center justify-center w-full gap-4 flex-wrap">
-        <CallControls onLeave={() => router.push('/')}/>
+        <CallControls onLeave={() => router.push("/")} />
 
         <DropdownMenu>
           <div className="flex items-center justify-center">
@@ -106,8 +111,21 @@ const MeetingRoom = () => {
           </div>
         </button>
 
-          {!isPersonalRoom && <EndCallButton />}
+        {!isPersonalRoom && <EndCallButton />}
 
+        <button
+          onClick={() => {
+            console.log(text);
+            navigator.clipboard.writeText(text);
+            toast({
+              title: "Link Copied",
+            });
+          }}
+        >
+          <div className="cursor-pointer rounded-full bg-[#19232d] h-10 w-10 flex items-center justify-center hover:bg-[#4c535b]">
+            <Share2 size={25} className="text-white" />
+          </div>
+        </button>
       </div>
     </section>
   );
