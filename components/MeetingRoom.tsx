@@ -7,14 +7,12 @@ import {
   PaginatedGridLayout,
   SpeakerLayout,
   useCallStateHooks,
-  useStreamVideoClient,
 } from "@stream-io/video-react-sdk";
 import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
